@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数组排序</title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		//一利用Arrays带有的排序方法快速排序
+		// import java.util.Arrays;
+		//public class Test2{
+		//        public static void main(String[] args){
+		//                int[] a={5,4,2,4,9,1};
+		//                Arrays.sort(a);  //进行排序
+		//                for(int i: a){
+		//                        System.out.print(i);
+		//                }
+		//        }
+		// }
+
+		//二
+
+		//数组排序算法
+		//public static int[] selectSort(int[] args){//选择排序算法
+		//               for (int i=0;i<args.length-1 ;i++ ){
+		//                        int min=i;
+		//                 for (int j=i+1;j<args.length ;j++ ){
+		//                 if (args[min]>args[j]){
+		//                 min=j;
+		//                                }
+		//                        }
+		//                        if (min!=i){
+		//                       int temp=args[i];
+		//                       args[i]=args[min];
+		//                       args[min]=temp;
+		//                       }
+		//               }
+		//               return args;
+		//       }
+
+		//三插入排序算法
+		public static int[] insertSort(int[] args) { //插入排序算法
+			for(int i = 1; i < args.length; i++) {
+				for(int j = i; j > 0; j--) {
+					if(args[j] < args[j - 1]) {
+						int temp = args[j - 1];
+						args[j - 1] = args[j];
+						args[j] = temp;
+					} else break;
+				}
+			}
+			return args;
+		}
+	</script>
+
+</html>
